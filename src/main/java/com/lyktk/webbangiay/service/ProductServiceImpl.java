@@ -4,10 +4,13 @@ import com.lyktk.webbangiay.domain.*;
 import com.lyktk.webbangiay.repository.*;
 import com.lyktk.webbangiay.utils.Constant;
 import com.lyktk.webbangiay.utils.DateTimeUtils;
+import com.lyktk.webbangiay.utils.exceptionHandler.LogicException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import javax.security.auth.login.LoginException;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Date;
@@ -91,6 +94,12 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getProductByGroup(Integer groupId) {
         return productRepository.getProductsByGroupId(groupId);
+    }
+
+    @Override
+    public Product getProductById(Integer productId) {
+        return productRepository.findById(productId)
+                .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found product"));
     }
 
     @Override
