@@ -29,8 +29,6 @@ public interface ProductService {
 
 	public List<Product> getProductByGroup(Integer groupId);
 
-	public Product getProductById(Integer productId);
-
 	void save(Product u);
 
 	void delete(Integer id);

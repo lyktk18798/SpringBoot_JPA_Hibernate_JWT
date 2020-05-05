@@ -82,7 +82,7 @@ public class ProductController {
                                                  @RequestParam(required = false) Integer color,
                                                  @RequestParam(required = false) Integer category
     ) throws Exception{
-        List<Product> rs;
+        List<Product> rs= new ArrayList<>();
         try{
             rs= productService.search(name, groupId, color, category);
         }catch(BadCredentialsException e){
@@ -95,7 +95,7 @@ public class ProductController {
 
     @GetMapping("v1/getProductByGroup/{groupId}")
     public ResponseEntity<?> searchProductByGroupId(@PathVariable("groupId") Integer groupId) throws Exception{
-        List<Product> rs;
+        List<Product> rs= new ArrayList<>();
         try{
             rs= productService.getProductByGroup(groupId);
         }catch(BadCredentialsException e){
@@ -104,11 +104,6 @@ public class ProductController {
 
         return ResponseEntity.ok(rs);
 
-    }
-
-    @GetMapping("v1/getProductById/{productId}")
-    public ResponseEntity<?> getProductById(@PathVariable("productId") Integer productId){
-        return new ResponseEntity<>(productService.getProductById(productId), HttpStatus.OK);
     }
 
 
