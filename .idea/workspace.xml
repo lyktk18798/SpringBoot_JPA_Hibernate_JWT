@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8f399bf6-14c5-4f3e-9f93-3b4fffecac58" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/webbangiay$WebbangiayApplication.ic" NAME="WebbangiayApplication Coverage Results" MODIFIED="1582427845241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-752665221">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="34" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.17" value="3" />
+          <entry key="project.open.time.18" value="5" />
+          <entry key="project.open.time.19" value="3" />
+          <entry key="project.open.time.20" value="7" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.30" value="3" />
+          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.opened" value="36" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="3" />
+          <entry key="java" value="271" />
+          <entry key="properties" value="3" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="3" />
+          <entry key="JAVA" value="271" />
+          <entry key="Properties" value="3" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="6" />
+          <entry key="java" value="10536" />
+          <entry key="properties" value="197" />
+          <entry key="xml" value="35" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="10531" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Properties" value="197" />
+          <entry key="Spring Data QL" value="5" />
+          <entry key="XML" value="35" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="webbangiay" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CorsFilter</find>
+      <find>orElseThrow</find>
+      <find>u</find>
+      <find>discount</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/project/backend" value="PREVIEW" />
+        <entry key="$USER_HOME$/team-anh-manh/source/pmbackend" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/StringUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/CustomerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/CustomerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/ProducerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/ProducerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/CategoryRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Producer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/ProducerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/RoleRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/DateTimeUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/OrdersDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/OrdersRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Orders.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/OrdersDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/OrdersDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/OrdersDetailsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/OrdersDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/ProductGroup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Color.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/ColorRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/ProductGroupRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/HelperController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/HelperService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/HelperServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/ProductRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/OrdersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/OrdersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/exceptionHandler/BussinessException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/exceptionHandler/BusinessException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/exceptionHandler/LogicException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/exceptionHandler/HandlerException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/ProducerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/OrdersServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/Constant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/ProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Product.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="webbangiay" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="25" />
+    <option name="width" value="1280" />
+    <option name="height" value="713" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="webbangiay" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="webbangiay" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="webbangiay" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="webbangiay" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webbangiay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webbangiay" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptionHandler" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="produc&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/domain/Product.java&#10;user&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/controllers/UserController.java&#10;product&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/service/ProductServiceImpl.java&#10;User&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/domain/User.java&#10;handle&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/utils/exceptionHandler/HandlerException.java&#10;pom&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/pom.xml&#10;us&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/service/UserServiceImpl.java&#10;or&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/service/OrdersServiceImpl.java&#10;produce&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/controllers/ProducerController.java&#10;order&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/controllers/OrdersController.java&#10;userC&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/controllers/UserController.java&#10;we&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/config/WebSecurityConfig.java&#10;he&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/service/HelperService.java&#10;app&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/resources/application.properties&#10;prod&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/service/ProductServiceImpl.java&#10;pro&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/controllers/ProductController.java&#10;productCo&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/controllers/ProductController.java&#10;Pr&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/service/ProductServiceImpl.java&#10;OR&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/controllers/OrdersController.java&#10;Pro&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/domain/Product.java&#10;application.pr&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/resources/application.properties&#10;pom.xml&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/pom.xml&#10;date&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/utils/DateTimeUtils.java&#10;u&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/service/CustomerServiceImpl.java&#10;cu&#9;PSI&#9;JAVA://com.lyktk.webbangiay.domain.Customer&#10;cus&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/controllers/CustomerController.java&#10;se&#9;FILE&#9;file:///Users/caokd/Downloads/webbangiay/src/main/java/com/lyktk/webbangiay/config/WebSecurityConfig.java" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585839386065" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lyktk.webbangiay.repository" />
+      <recent name="com.lyktk.webbangiay.domain" />
+      <recent name="com.lyktk.webbangiay.controllers" />
+      <recent name="com.lyktk.webbangiay.service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="WebbangiayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="webbangiay" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lyktk.webbangiay.WebbangiayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f399bf6-14c5-4f3e-9f93-3b4fffecac58" name="Default Changelist" comment="" />
+      <created>1580751298916</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580751298916</updated>
+      <workItem from="1580751300423" duration="402000" />
+      <workItem from="1580831550947" duration="3201000" />
+      <workItem from="1580919792070" duration="4189000" />
+      <workItem from="1581182195806" duration="2267000" />
+      <workItem from="1581252882197" duration="5822000" />
+      <workItem from="1581344082119" duration="1440000" />
+      <workItem from="1581427908981" duration="9746000" />
+      <workItem from="1581517478268" duration="282000" />
+      <workItem from="1581746408393" duration="1526000" />
+      <workItem from="1581780279185" duration="6269000" />
+      <workItem from="1581817652029" duration="16981000" />
+      <workItem from="1581948732478" duration="1733000" />
+      <workItem from="1582213803305" duration="5625000" />
+      <workItem from="1582303008289" duration="5473000" />
+      <workItem from="1582367687685" duration="17431000" />
+      <workItem from="1582425720581" duration="15848000" />
+      <workItem from="1582563184532" duration="934000" />
+      <workItem from="1582642057366" duration="3018000" />
+      <workItem from="1582815994328" duration="10736000" />
+      <workItem from="1582948757512" duration="13334000" />
+      <workItem from="1583056567084" duration="1251000" />
+      <workItem from="1583071815058" duration="5257000" />
+      <workItem from="1583241995673" duration="5582000" />
+      <workItem from="1583512725315" duration="1757000" />
+      <workItem from="1583554198694" duration="7883000" />
+      <workItem from="1583935238780" duration="1236000" />
+      <workItem from="1584146517579" duration="12712000" />
+      <workItem from="1584280167157" duration="1580000" />
+      <workItem from="1584794563750" duration="337000" />
+      <workItem from="1584887481726" duration="3817000" />
+      <workItem from="1585143611082" duration="3347000" />
+      <workItem from="1585361825358" duration="2667000" />
+      <workItem from="1585391973530" duration="3322000" />
+      <workItem from="1585821097963" duration="4998000" />
+      <workItem from="1588346410974" duration="933000" />
+      <workItem from="1588646636584" duration="801000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="184437000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1280" height="713" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.22455573" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5024155" side_tool="true" weight="0.1987076" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Learn" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32850242" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36553946" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32852563" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.3268921" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32956383" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>productRepository.findFirstByOrderByIdDesc()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((StandardMultipartHttpServletRequest.StandardMultipartFile) file).filename</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>org.springframework.web.multipart.support.StandardMultipartHttpServletRequest</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new SimpleDateFormat(&quot;dd-MM-yyyy&quot;).parse(date)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>LocalDate.parse(date, formatter)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>DateTimeUtils.convertStingToLocalDate(dateFrom)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>&quot;%&quot;+fullname.toUpperCase()+&quot;%&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>&quot;&amp;&quot;+email.toUpperCase()+&quot;%&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Orders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/MyUserDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/OrdersDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/OrdersDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/OrdersDetailsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/ColorRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/HelperController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/ProductGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/ProductGroupRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/HelperServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="30" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar!/org/apache/commons/lang3/RandomStringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/HelperService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar!/org/apache/commons/lang3/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/OrdersService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/OrdersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/ProducerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="55" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="196" selection-start-line="196" selection-end-line="196" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/bind/annotation/ControllerAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="361" column="4" selection-start-line="361" selection-start-column="4" selection-end-line="361" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="58" column="95" selection-start-line="58" selection-start-column="95" selection-end-line="58" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3675">
+          <caret line="285" column="35" selection-start-line="285" selection-start-column="35" selection-end-line="285" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/JwtUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/exceptionHandler/LogicException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/enums/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/OrdersServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-280">
+          <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/OrdersDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/annotation/Documented.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/jakarta/validation/jakarta.validation-api/2.0.1/jakarta.validation-api-2.0.1-sources.jar!/javax/validation/constraints/NotBlank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/MyUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/exceptionHandler/HandlerException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/utils/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/http/ResponseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="108" column="48" selection-start-line="108" selection-start-column="48" selection-end-line="108" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/domain/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/ProducerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/service/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+          <folding>
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#4358#4359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lyktk/webbangiay/controllers/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
