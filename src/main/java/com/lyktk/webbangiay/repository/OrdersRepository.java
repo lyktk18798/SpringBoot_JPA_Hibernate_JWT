@@ -20,7 +20,7 @@ public interface OrdersRepository extends JpaRepository<Orders, Integer>{
             "and (:dateTo is null or p.createDate <= :dateTo)" +
             "and (p.status in :status)"
     )
-	public List<Orders> findAllOrders(@Param("code") String code,
+	List<Orders> findAllOrders(@Param("code") String code,
                                     @Param("status") List<Integer> status,
                                      @Param("dateFrom") Date dateFrom,
                                      @Param("dateTo") Date dateTo

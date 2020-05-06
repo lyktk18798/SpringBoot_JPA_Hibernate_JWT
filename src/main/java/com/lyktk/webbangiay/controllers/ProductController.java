@@ -41,7 +41,7 @@ public class ProductController {
 										 @RequestParam(required = false) Integer producerId,
 										 @RequestParam(required = false) Integer groupId
     ) throws Exception{
-		List<Product> rs= new ArrayList<>();
+		List<Product> rs;
 		try{
 			rs= productService.findAllProducer(code, name, colorId, priceFrom, priceTo, dateFrom, dateTo, size, categoryId, producerId, groupId);
 		}catch(BadCredentialsException e){
@@ -82,7 +82,7 @@ public class ProductController {
                                                  @RequestParam(required = false) Integer color,
                                                  @RequestParam(required = false) Integer category
     ) throws Exception{
-        List<Product> rs= new ArrayList<>();
+        List<Product> rs;
         try{
             rs= productService.search(name, groupId, color, category);
         }catch(BadCredentialsException e){
@@ -95,7 +95,7 @@ public class ProductController {
 
     @GetMapping("v1/getProductByGroup/{groupId}")
     public ResponseEntity<?> searchProductByGroupId(@PathVariable("groupId") Integer groupId) throws Exception{
-        List<Product> rs= new ArrayList<>();
+        List<Product> rs;
         try{
             rs= productService.getProductByGroup(groupId);
         }catch(BadCredentialsException e){
@@ -103,6 +103,25 @@ public class ProductController {
         }
 
         return ResponseEntity.ok(rs);
+
+    }
+
+    @GetMapping("v1/getSellingProduct")
+    public ResponseEntity<?> getSellingProduct() throws Exception{
+        List<Product> rs;
+        try{
+            rs= productService.getSellingProduct();
+        }catch(BadCredentialsException e){
+            throw new Exception("Error", e);
+        }
+
+        return ResponseEntity.ok(rs);
+
+    }
+
+    @GetMapping("v1/getProductById/{id}")
+    public ResponseEntity<?> getProductById(@PathVariable("id") Integer id){
+	    return ResponseEntity.ok(productService.getProductById(id));
 
     }
 

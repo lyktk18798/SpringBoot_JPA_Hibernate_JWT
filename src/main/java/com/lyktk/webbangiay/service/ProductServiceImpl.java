@@ -4,8 +4,10 @@ import com.lyktk.webbangiay.domain.*;
 import com.lyktk.webbangiay.repository.*;
 import com.lyktk.webbangiay.utils.Constant;
 import com.lyktk.webbangiay.utils.DateTimeUtils;
+import com.lyktk.webbangiay.utils.exceptionHandler.LogicException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -32,8 +34,13 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductGroupRepository productGroupRepository;
 
+    @Autowired
+    private OrdersDetailsRepository ordersDetailsRepository;
+
     @Override
-    public List<Product> findAllProducer(String code, String name, Integer color, Integer priceFrom, Integer priceTo, String dateFrom, String dateTo, Integer size, Integer categoryId, Integer producerId, Integer groupId) {
+    public List<Product> findAllProducer(String code, String name, Integer color, Integer priceFrom,
+                                         Integer priceTo, String dateFrom, String dateTo, Integer size,
+                                         Integer categoryId, Integer producerId, Integer groupId) {
         List<Integer> category = Arrays.asList(categoryId);
         List<Integer> producer = Arrays.asList(producerId);
         List<Integer> colors = Arrays.asList(color);
@@ -91,6 +98,16 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getProductByGroup(Integer groupId) {
         return productRepository.getProductsByGroupId(groupId);
+    }
+
+    @Override
+    public List<Product> getSellingProduct() {
+        return ordersDetailsRepository.getSelliingProduct();
+    }
+
+    @Override
+    public Product getProductById(Integer id) {
+        return productRepository.findById(id).orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found product with id "+id+". Let try another id!"));
     }
 
     @Override

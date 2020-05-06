@@ -28,17 +28,17 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
             "and (p.productGroup.id in :groupId)"
     )
     List<Product> findProducts(@Param("name") String name,
-                                      @Param("code") String code,
-                                      @Param("priceFrom") Integer priceFrom,
-                                      @Param("priceTo") Integer priceTo,
-                                      @Param("dateFrom") Date dateFrom,
-                                      @Param("dateTo") Date dateTo,
-                                      @Param("color") List<Integer> color,
-                                      @Param("size") Integer size,
-                                      @Param("categoryId") List<Integer> categoryId,
-                                      @Param("producerId") List<Integer> prodcerId,
-                                      @Param("groupId") List<Integer> groupId
-                                      );
+                              @Param("code") String code,
+                              @Param("priceFrom") Integer priceFrom,
+                              @Param("priceTo") Integer priceTo,
+                              @Param("dateFrom") Date dateFrom,
+                              @Param("dateTo") Date dateTo,
+                              @Param("color") List<Integer> color,
+                              @Param("size") Integer size,
+                              @Param("categoryId") List<Integer> categoryId,
+                              @Param("producerId") List<Integer> prodcerId,
+                              @Param("groupId") List<Integer> groupId
+    );
 
     @Query("SELECT p FROM Product p WHERE " +
             " p.name like :name " +
@@ -57,6 +57,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
             " p.productGroup.id = :groupId"
     )
     List<Product> getProductsByGroupId(@Param("groupId") Integer groupId);
+
 
     Product findFirstByOrderByIdDesc();
 

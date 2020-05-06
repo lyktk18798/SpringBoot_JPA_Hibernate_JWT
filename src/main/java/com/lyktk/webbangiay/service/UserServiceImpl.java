@@ -72,7 +72,12 @@ public class UserServiceImpl implements UserService {
 	        List<Role> lstRoles= roleRepository.findAll();
 	        roles= lstRoles.stream().map(Role::getId).collect(Collectors.toList());
         }
-		return userRepository.findAllByEmailLikeAndAndFullnameLikeAndPhonenumberLikeAndRoleIdIn("%"+email.toUpperCase()+"%", "%"+fullname.toUpperCase()+"%", "%"+phonenumber.toUpperCase()+"%", roles);
+		return userRepository.findAllByEmailLikeAndAndFullnameLikeAndPhonenumberLikeAndRoleIdIn(
+		        "%"+email.toUpperCase()+"%",
+                "%"+fullname.toUpperCase()+"%",
+                "%"+phonenumber.toUpperCase()+"%",
+                roles
+        );
 	}
 
     @Override
