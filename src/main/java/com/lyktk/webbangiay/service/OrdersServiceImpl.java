@@ -1,6 +1,7 @@
 package com.lyktk.webbangiay.service;
 
 import com.lyktk.webbangiay.domain.Orders;
+import com.lyktk.webbangiay.domain.Product;
 import com.lyktk.webbangiay.repository.OrdersRepository;
 import com.lyktk.webbangiay.utils.Constant;
 import com.lyktk.webbangiay.utils.DateTimeUtils;
@@ -41,6 +42,14 @@ public class OrdersServiceImpl implements OrdersService {
             u.setUpdateDate(new Date());
         }
         ordersRepository.save(u);
+    }
+
+    @Override
+    public void addToCart(List<Product> lstProducts) {
+        //add new order
+        Orders newOrder = new Orders();
+
+        ordersRepository.save(newOrder);
     }
 
     @Override

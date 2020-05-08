@@ -33,7 +33,7 @@ public class CustomerController {
 										 @RequestParam(required = false) Integer page,
 										 @RequestParam(required = false) Integer size
                                          ) throws Exception{
-		List<Customer> rs= new ArrayList<>();
+		List<Customer> rs;
 		try{
 			rs= customerService.findAllCustomers(email, phonenumber);
 		}catch(BadCredentialsException e){
@@ -47,6 +47,24 @@ public class CustomerController {
 
     @PostMapping("/save")
     public ResponseEntity<?> saveUser(@RequestBody(required = false)Customer customer) throws Exception{
+        try{
+            customerService.save(customer);
+        }catch(BadCredentialsException e){
+            throw new Exception("Error", e);
+        }
+
+        return ResponseEntity.ok(HttpStatus.OK);
+
+    }
+
+    @PostMapping("/v1/login")
+    public ResponseEntity<?> login(@RequestBody(required = false) AuthenticationRequest request){
+        return ResponseEntity.ok(customerService.login(request.getUsername(), request.getPassword()));
+
+    }
+
+    @PostMapping("/v1/register")
+    public ResponseEntity<?> register(@RequestBody(required = false)Customer customer) throws Exception{
         try{
             customerService.save(customer);
         }catch(BadCredentialsException e){

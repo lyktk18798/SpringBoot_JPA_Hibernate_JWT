@@ -4,9 +4,11 @@ import com.lyktk.webbangiay.domain.Customer;
 import com.lyktk.webbangiay.repository.CustomerRepository;
 import com.lyktk.webbangiay.utils.DateTimeUtils;
 import com.lyktk.webbangiay.utils.StringUtils;
+import com.lyktk.webbangiay.utils.exceptionHandler.LogicException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -34,5 +36,11 @@ public class CustomerServiceImpl implements CustomerService {
         customer.setDateRegistered(new Date());
         customer.setPassword(passwordEncoder.encode(StringUtils.genPass()));
         customerRepository.save(customer);
+    }
+
+    @Override
+    public Customer login(String email, String password) {
+        return customerRepository.findByEmailAndPassword(email, password)
+                .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Email or password is invalid! Let try again"));
     }
 }

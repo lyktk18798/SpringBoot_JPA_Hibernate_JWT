@@ -11,8 +11,10 @@ import java.util.List;
  */
 public interface CustomerService {
 
-    public List<Customer> findAllCustomers(String email, String phone);
+    List<Customer> findAllCustomers(String email, String phone);
 
     void save(Customer customer);
+
+    Customer login(String email, String password);
 }
 

@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 
 /**
@@ -14,7 +15,10 @@ import java.util.List;
  */
 public interface CustomerRepository extends JpaRepository<Customer, Integer>{
 
-	public List<Customer> findByEmailLikeAndAndPhoneLike(@Param("email") String email,
+	List<Customer> findByEmailLikeAndAndPhoneLike(@Param("email") String email,
                                                          @Param("phone") String phone);
 
+
+    Optional<Customer> findByEmailAndPassword(@Param("email") String email,
+                                              @Param("password") String password);
 }

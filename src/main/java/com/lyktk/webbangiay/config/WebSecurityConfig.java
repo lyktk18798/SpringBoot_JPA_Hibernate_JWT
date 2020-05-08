@@ -56,7 +56,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		//index of role go to most retrictive to least retrictive
 		http.csrf().disable().cors().and()
-				.authorizeRequests().antMatchers("/api/user/authenticated", "/api/user/caokd/**", "/api/product/v1/**", "/api/helper/**", "/api/user/forgot-pass/**")
+				.authorizeRequests().antMatchers(
+    "/api/user/authenticated",
+                "/api/user/caokd/**",
+                "/api/product/v1/**",
+                "/api/helper/**",
+                "/api/user/forgot-pass/**",
+                "/api/customer/v1/**"
+                )
 				.permitAll().anyRequest().authenticated()
 				.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
