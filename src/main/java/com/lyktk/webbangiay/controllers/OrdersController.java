@@ -1,6 +1,7 @@
 package com.lyktk.webbangiay.controllers;
 
 import com.lyktk.webbangiay.domain.Orders;
+import com.lyktk.webbangiay.models.OrderRequest;
 import com.lyktk.webbangiay.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -52,6 +53,18 @@ public class OrdersController {
     public ResponseEntity<?> update(@RequestBody(required = false)Orders orders) throws Exception{
         try{
             ordersService.update(orders);
+        }catch(BadCredentialsException e){
+            throw new Exception("Error", e);
+        }
+
+        return ResponseEntity.ok(HttpStatus.OK);
+
+    }
+
+    @PostMapping("/v1/add")
+    public ResponseEntity<?> buy(@RequestBody(required = false)OrderRequest orderRequest) throws Exception{
+        try{
+            ordersService.buy(orderRequest);
         }catch(BadCredentialsException e){
             throw new Exception("Error", e);
         }

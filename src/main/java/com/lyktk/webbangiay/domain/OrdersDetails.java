@@ -33,12 +33,9 @@ public class OrdersDetails implements Serializable {
     @NotNull
     private Integer ordersId;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "products_id", referencedColumnName = "id")
     private Product product;
-
-    @Transient
-    private Integer totalQty;
 
 
 }

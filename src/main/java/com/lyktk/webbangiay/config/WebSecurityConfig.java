@@ -62,7 +62,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 "/api/product/v1/**",
                 "/api/helper/**",
                 "/api/user/forgot-pass/**",
-                "/api/customer/v1/**"
+                "/api/customer/v1/**",
+                "/api/order/v1/**"
                 )
 				.permitAll().anyRequest().authenticated()
 				.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);

@@ -2,6 +2,7 @@ package com.lyktk.webbangiay.service;
 
 import com.lyktk.webbangiay.domain.Orders;
 import com.lyktk.webbangiay.domain.Product;
+import com.lyktk.webbangiay.models.OrderRequest;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public interface OrdersService {
 
     void save(Orders u);
 
-    void addToCart(List<Product> lstProducts);
+    void buy(OrderRequest orderRequest);
 
     void delete(Integer id);
 

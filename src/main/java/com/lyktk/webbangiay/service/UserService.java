@@ -14,13 +14,13 @@ import com.lyktk.webbangiay.domain.User;
  */
 public interface UserService extends UserDetailsService {
 
-	public Optional<User> getUserByUsername(String username);
+	Optional<User> getUserByUsername(String username);
 
 	boolean existsByUserName(String userName);
 
 	boolean existsByEmail(String email);
 
-	public List<User> findAllUsers(String email, String fullname, String phonenumber, Integer role);
+	List<User> findAllUsers(String email, String fullname, String phonenumber, Integer role);
 
 	void save(User u);
 

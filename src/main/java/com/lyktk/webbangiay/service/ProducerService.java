@@ -14,7 +14,7 @@ import java.util.Optional;
  */
 public interface ProducerService{
 
-	public List<Producer> findAllProducer(String email, String name, String phonenumber, Integer categoryId);
+	List<Producer> findAllProducer(String email, String name, String phonenumber, Integer categoryId);
 
 	void save(Producer u);
 
