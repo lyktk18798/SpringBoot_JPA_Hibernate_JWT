@@ -19,6 +19,5 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer>{
                                                          @Param("phone") String phone);
 
 
-    Optional<Customer> findByEmailAndPassword(@Param("email") String email,
-                                              @Param("password") String password);
+    Optional<Customer> findByEmail(@Param("email") String email);
 }

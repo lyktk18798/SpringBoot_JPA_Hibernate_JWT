@@ -34,13 +34,17 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void save(Customer customer) {
         customer.setDateRegistered(new Date());
-        customer.setPassword(passwordEncoder.encode(StringUtils.genPass()));
+        customer.setPassword(passwordEncoder.encode(customer.getPassword()));
         customerRepository.save(customer);
     }
 
     @Override
     public Customer login(String email, String password) {
-        return customerRepository.findByEmailAndPassword(email, password)
+        Customer customer = customerRepository.findByEmail(email)
                 .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Email or password is invalid! Let try again"));
+        if(!passwordEncoder.matches(password, customer.getPassword())) {
+            throw new LogicException(HttpStatus.NOT_FOUND, "Email or password is invalid! Let try again");
+        }
+        return customer;
     }
 }
