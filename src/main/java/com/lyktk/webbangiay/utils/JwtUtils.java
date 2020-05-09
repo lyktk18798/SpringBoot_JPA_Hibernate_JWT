@@ -1,5 +1,7 @@
 package com.lyktk.webbangiay.utils;
 
+import com.lyktk.webbangiay.domain.MyUserDetails;
+import com.lyktk.webbangiay.domain.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -35,8 +37,9 @@ public class JwtUtils {
         return extractExpiration(token).before(new Date());
     }
 
-    public String generateToken(UserDetails userDetails) {
+    public String generateToken(MyUserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
+        claims.put("user-login", new MyUserDetails(userDetails.getUsername(), userDetails.getRole()));
         return createToken(claims, userDetails.getUsername());
     }
 

@@ -18,11 +18,18 @@ public class MyUserDetails implements UserDetails{
 	private static final long serialVersionUID = 1L;
 	private String username;
 	private String password;
-	
+	private String role;
+
 	public MyUserDetails(User user) {
 		this.username= user.getEmail();
 		this.password= user.getPassword();
+		this.role= user.getRole().getName();
 	}
+
+    public MyUserDetails(String username, String role) {
+        this.username= username;
+        this.role= role;
+    }
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

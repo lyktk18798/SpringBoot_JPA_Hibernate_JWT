@@ -1,5 +1,6 @@
 package com.lyktk.webbangiay.controllers;
 
+import com.lyktk.webbangiay.domain.MyUserDetails;
 import com.lyktk.webbangiay.domain.User;
 import com.lyktk.webbangiay.models.AuthenticationRequest;
 import com.lyktk.webbangiay.models.AuthenticationResponse;
@@ -47,7 +48,7 @@ public class UserController {
 			throw new Exception("Incorrect username or password", e);
 		}
 
-		final UserDetails userDetails= myUserDetailsService.loadUserByUsername(request.getUsername());
+		final MyUserDetails userDetails= myUserDetailsService.loadUserByUsername(request.getUsername());
 		final String jwt= jwtUtils.generateToken(userDetails);
 
 		return ResponseEntity.ok(new AuthenticationResponse(jwt));
