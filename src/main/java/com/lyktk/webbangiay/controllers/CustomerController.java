@@ -74,4 +74,11 @@ public class CustomerController {
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
+
+    @PostMapping("/v1/forgot-pass/{email}")
+    public ResponseEntity<?> forgotPass(@PathVariable("email") String email) {
+        customerService.forgotPass(email);
+        return ResponseEntity.ok(HttpStatus.OK);
+
+    }
 }

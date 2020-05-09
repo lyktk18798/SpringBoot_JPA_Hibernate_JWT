@@ -17,5 +17,7 @@ public interface CustomerService {
 
     Customer login(String email, String password);
 
+    void forgotPass(String email);
+
 }
 
