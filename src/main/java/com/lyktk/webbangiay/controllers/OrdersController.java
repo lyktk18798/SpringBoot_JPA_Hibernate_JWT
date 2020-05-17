@@ -25,7 +25,7 @@ public class OrdersController {
 										 @RequestParam(required = false) String dateFrom,
 										 @RequestParam(required = false) String dateTo
                                          ) throws Exception{
-		List<Orders> rs= new ArrayList<>();
+		List<Orders> rs;
 		try{
 			rs= ordersService.findAllOrders(code, dateFrom, dateTo, status);
 		}catch(BadCredentialsException e){

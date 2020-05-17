@@ -41,7 +41,7 @@ public class OrdersServiceImpl implements OrdersService {
     public List<Orders> findAllOrders(String code, String dateFrom, String dateTo, Integer status) {
         List<Integer> statusOrders = Arrays.asList(status);
         if(status == Constant.ALL_ITEMS){
-            statusOrders= Arrays.asList(1, 2, 3);
+            statusOrders= Arrays.asList(1, 2, 3, 4);
         }
         return ordersRepository.findAllOrders("%"+code.toUpperCase()+"%",
                                                 statusOrders,
@@ -78,6 +78,7 @@ public class OrdersServiceImpl implements OrdersService {
         orders.setStatus(0);
         orders.setAddress(orderRequest.getAddress());
 
+
         //save order
         Orders newOrder = ordersRepository.save(orders);
         ordersRepository.flush();
@@ -85,26 +86,44 @@ public class OrdersServiceImpl implements OrdersService {
         //create order-details
         orderRequest.getLstProducts().forEach(item -> {
             OrdersDetails ordersDetails = new OrdersDetails();
-            //find product by id
+
+            //find product by idrders
             Product product = productRepository.findById(item.getId())
                     .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found product in list product"));
             ordersDetails.setOrdersId(newOrder.getId());
             ordersDetails.setQuantity(item.getQuantity());
             ordersDetails.setProduct(product);
             ordersDetails.setDiscount(0.2);
+
             //save order-details
             ordersDetailsRepository.save(ordersDetails);
+
+            //update quantity products table
+            product.setQuantity(product.getQuantity() - item.getQuantity());
+            productRepository.save(product);
         });
+
+
     }
 
     @Override
     public void delete(Integer id) {
-        ordersRepository.deleteById(id);
+        Orders orders = ordersRepository.findById(id)
+                .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found orders with id "+id));
+        orders.setStatus(4); //la don hang ao => xoa
+        ordersRepository.save(orders);
     }
 
     @Override
     public void update(Orders orders) {
-        if(orders.getStatus() == 1 ){
+        /*
+        status = 0 => cho phe duyet
+        status = 1 => chua giao
+        status = 2 => dang giao
+        status = 3 => done
+        status = 4 => don hang ao
+         */
+        if(orders.getStatus() == 0 ){
             orders.setStatus(2);
         }else{
             orders.setStatus(3);

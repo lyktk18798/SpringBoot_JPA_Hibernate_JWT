@@ -43,6 +43,9 @@ public class Customer implements Serializable {
     @CreatedDate
     private Date dateRegistered;
 
+    @Column
+    private Integer point;
+
 
 
 }

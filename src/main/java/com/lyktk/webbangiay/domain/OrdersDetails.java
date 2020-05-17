@@ -37,5 +37,8 @@ public class OrdersDetails implements Serializable {
     @JoinColumn(name = "products_id", referencedColumnName = "id")
     private Product product;
 
+    @Column
+    private Double totalMoney;
+
 
 }

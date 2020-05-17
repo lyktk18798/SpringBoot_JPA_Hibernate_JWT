@@ -5,12 +5,15 @@ import com.lyktk.webbangiay.domain.Producer;
 import com.lyktk.webbangiay.repository.CategoryRepository;
 import com.lyktk.webbangiay.repository.ProducerRepository;
 import com.lyktk.webbangiay.utils.Constant;
+import com.lyktk.webbangiay.utils.exceptionHandler.LogicException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,7 +32,12 @@ public class ProducerServiceImpl implements ProducerService {
             List<Category> lst= categoryRepository.findAll();
             category= lst.stream().map(Category::getId).collect(Collectors.toList());
         }
-        return producerRepository.findAllByEmailLikeAndNameLikeAndPhoneLikeAndCategoryIdIn("%"+email.toUpperCase()+"%", "%"+name.toUpperCase()+"%", "%"+phonenumber.toUpperCase()+"%", category);
+        return producerRepository.findAllByEmailLikeAndNameLikeAndPhoneLikeAndCategoryIdInAndAndStatusIs(
+                "%"+email.toUpperCase()+"%",
+                "%"+name.toUpperCase()+"%",
+                "%"+phonenumber.toUpperCase()+"%",
+                category,
+                Constant.ACTIVE);
     }
 
     @Override
@@ -47,7 +55,11 @@ public class ProducerServiceImpl implements ProducerService {
 
     @Override
     public void delete(Integer id) {
-        producerRepository.deleteById(id);
+        Producer producer = producerRepository.findById(id)
+                .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found producer with id "+id));
+        producer.setStatus(Constant.INACTIVE);
+        producerRepository.save(producer);
+
     }
 
 }

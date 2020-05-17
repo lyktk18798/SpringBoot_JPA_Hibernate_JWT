@@ -87,25 +87,4 @@ public class UserController {
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
-
-    @GetMapping("/caokd/{id}")
-    public ResponseEntity<?> caokd(@PathVariable("id") int id) {
-
-	    List<Integer> list = new ArrayList<>();
-	    list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-
-
-        List<Integer> result = list.stream().filter(i -> i == id).collect(Collectors.toList());
-
-        if (result.isEmpty()) {
-            throw new LogicException(HttpStatus.NOT_FOUND, id + " khong ton tai");
-        }
-
-        return new ResponseEntity<>(result, HttpStatus.OK);
-    }
-
 }

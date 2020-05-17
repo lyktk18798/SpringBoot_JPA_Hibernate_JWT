@@ -19,7 +19,7 @@ public class OrdersDetailsController {
 
 	@GetMapping("/getDetails/{id}")
 	public ResponseEntity<?> getAllUsers(@PathVariable("id") Integer id) throws Exception{
-		List<OrdersDetails> rs= new ArrayList<>();
+		List<OrdersDetails> rs;
 		try{
 			rs= ordersDetailsService.findAllOrdersDetails(id);
 		}catch(BadCredentialsException e){

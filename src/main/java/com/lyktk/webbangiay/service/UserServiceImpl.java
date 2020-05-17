@@ -72,11 +72,12 @@ public class UserServiceImpl implements UserService {
 	        List<Role> lstRoles= roleRepository.findAll();
 	        roles= lstRoles.stream().map(Role::getId).collect(Collectors.toList());
         }
-		return userRepository.findAllByEmailLikeAndAndFullnameLikeAndPhonenumberLikeAndRoleIdIn(
+		return userRepository.findAllByEmailLikeAndAndFullnameLikeAndPhonenumberLikeAndRoleIdInAndStatusIs(
 		        "%"+email.toUpperCase()+"%",
                 "%"+fullname.toUpperCase()+"%",
                 "%"+phonenumber.toUpperCase()+"%",
-                roles
+                roles,
+                1
         );
 	}
 
@@ -99,7 +100,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delete(Integer id) {
-        userRepository.deleteById(id);
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found user with id"+id));
+        user.setStatus(Constant.INACTIVE);
+        userRepository.save(user);
     }
 
     @Override

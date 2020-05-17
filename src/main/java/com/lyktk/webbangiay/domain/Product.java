@@ -85,4 +85,7 @@ public class Product implements Serializable {
     @JoinColumn(name = "producer_id", nullable = false)
     private Producer producer;
 
+    @Column
+    private Integer status;
+
 }

@@ -63,6 +63,9 @@ public class User implements Serializable {
 	@Column
 	private String phonenumber;
 
+	@Column
+    private Integer status;
+
     @ManyToOne
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;

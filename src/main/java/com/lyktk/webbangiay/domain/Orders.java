@@ -63,4 +63,9 @@ public class Orders implements Serializable {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
+    @Column
+    private Double discount;
+
+
+
 }

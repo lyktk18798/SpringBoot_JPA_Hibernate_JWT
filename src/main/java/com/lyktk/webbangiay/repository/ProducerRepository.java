@@ -14,9 +14,10 @@ import java.util.Optional;
  */
 public interface ProducerRepository extends JpaRepository<Producer, Integer>{
 
-    public List<Producer> findAllByEmailLikeAndNameLikeAndPhoneLikeAndCategoryIdIn(String email,
-                                                                                          String name,
-                                                                                          String phonenumber,
-                                                                                          List<Integer> categoryId);
+    public List<Producer> findAllByEmailLikeAndNameLikeAndPhoneLikeAndCategoryIdInAndAndStatusIs(String email,
+                                                                                                  String name,
+                                                                                                  String phonenumber,
+                                                                                                  List<Integer> categoryId,
+                                                                                                 Integer status);
 
 }

@@ -71,7 +71,8 @@ public class ProductServiceImpl implements ProductService {
                                                 size,
                                                 category,
                                                 producer,
-                                                groups
+                                                groups,
+                                                Constant.ACTIVE
                                                         );
     }
 
@@ -92,7 +93,7 @@ public class ProductServiceImpl implements ProductService {
             List<ProductGroup> groupList = productGroupRepository.findAll();
             groups= groupList.stream().map(ProductGroup::getId).collect(Collectors.toList());
         }
-        return productRepository.search("%"+name.toUpperCase()+"%", groups, colors, category);
+        return productRepository.search("%"+name.toUpperCase()+"%", groups, colors, category, Constant.ACTIVE);
     }
 
     @Override
@@ -127,7 +128,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void delete(Integer id) {
-        productRepository.deleteById(id);
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found product with id "+id));
+        product.setStatus(Constant.INACTIVE);
+        productRepository.save(product);
     }
 
 }
