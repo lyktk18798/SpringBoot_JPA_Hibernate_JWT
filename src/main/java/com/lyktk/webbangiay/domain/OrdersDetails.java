@@ -30,8 +30,9 @@ public class OrdersDetails implements Serializable {
     @NotNull
     private Double discount;
 
-    @NotNull
-    private Integer ordersId;
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "orders_id", referencedColumnName = "id")
+    private Orders orders;
 
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "products_id", referencedColumnName = "id")

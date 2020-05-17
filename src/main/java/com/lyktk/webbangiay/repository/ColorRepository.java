@@ -16,5 +16,5 @@ public interface ColorRepository extends JpaRepository<Color, Integer>{
 
     List<Color> findAllByStatusIs(Integer status);
 
-    Optional<Color> findAllByNameEquals(String name);
+    boolean existsAllByNameEquals(String name);
 }

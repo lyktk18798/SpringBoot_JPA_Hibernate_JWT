@@ -90,7 +90,7 @@ public class OrdersServiceImpl implements OrdersService {
             //find product by idrders
             Product product = productRepository.findById(item.getId())
                     .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found product in list product"));
-            ordersDetails.setOrdersId(newOrder.getId());
+            ordersDetails.setOrders(newOrder);
             ordersDetails.setQuantity(item.getQuantity());
             ordersDetails.setProduct(product);
             ordersDetails.setDiscount(0.2);

@@ -27,16 +27,16 @@ public class ColorServiceImpl implements ColorService {
 
     @Override
     public void save(Color u) {
-        Color color = colorRepository.findAllByNameEquals(u.getName())
-                .orElseThrow(() -> new LogicException(HttpStatus.FOUND, "Existed color with code "+u.getName()));
-        System.out.print(color.getId());
-        if(u.getId() == null){
+        boolean isExisted = colorRepository.existsAllByNameEquals(u.getName());
+        if(!isExisted){
             u.setCreateBy(1);
             u.setCreateDate(new Date());
             u.setStatus(Constant.ACTIVE);
-
+            colorRepository.save(u);
+        }else{
+            throw new LogicException(HttpStatus.FOUND, "Existed color with code"+u.getName() );
         }
-        colorRepository.save(u);
+
     }
 
     @Override

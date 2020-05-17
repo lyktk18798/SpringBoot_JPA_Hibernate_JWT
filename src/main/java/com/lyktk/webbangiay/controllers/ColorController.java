@@ -34,8 +34,14 @@ public class ColorController {
 
     @PostMapping("/save")
     public ResponseEntity<?> saveUser(@RequestBody(required = false)Color producer){
+	    String message;
+	    try{
+            colorService.save(producer);
+        }catch(Exception e){
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
+        }
 
-        colorService.save(producer);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
