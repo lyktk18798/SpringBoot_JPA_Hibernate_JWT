@@ -5,7 +5,6 @@ import com.lyktk.webbangiay.service.ColorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,12 +17,15 @@ public class ColorController {
     private ColorService colorService;
 
 	@GetMapping("/getAll")
-	public ResponseEntity<?> getAllUsers(@RequestParam(required = false) String name) throws Exception{
+	public ResponseEntity<?> getAllUsers(@RequestParam(required = false) String name){
 		List<Color> rs;
+		String message;
+
 		try{
 			rs= colorService.findAll(name);
-		}catch(BadCredentialsException e){
-			throw new Exception("", e);
+		}catch(Exception e){
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 		}
 
 		return ResponseEntity.ok(rs);
@@ -31,25 +33,17 @@ public class ColorController {
 	}
 
     @PostMapping("/save")
-    public ResponseEntity<?> saveUser(@RequestBody(required = false)Color producer) throws Exception{
-        try{
-            colorService.save(producer);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
+    public ResponseEntity<?> saveUser(@RequestBody(required = false)Color producer){
 
+        colorService.save(producer);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
     @PostMapping("/delete/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable("id")Integer id) throws Exception{
-        try{
-            colorService.delete(id);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
+    public ResponseEntity<?> deleteUser(@PathVariable("id")Integer id){
 
+        colorService.delete(id);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }

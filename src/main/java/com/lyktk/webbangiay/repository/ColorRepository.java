@@ -4,6 +4,7 @@ import com.lyktk.webbangiay.domain.Color;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 
 /**
@@ -14,4 +15,6 @@ public interface ColorRepository extends JpaRepository<Color, Integer>{
     List<Color> findAllByNameLikeAndStatusIs(String name, Integer status);
 
     List<Color> findAllByStatusIs(Integer status);
+
+    Optional<Color> findAllByNameEquals(String name);
 }

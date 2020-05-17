@@ -40,12 +40,14 @@ public class UserController {
 	JwtUtils jwtUtils;
 
 	@PostMapping("/authenticated")
-	public ResponseEntity<?> createAuthenticationToken(@RequestBody(required = false) AuthenticationRequest request) throws Exception{
-		try{
+	public ResponseEntity<?> createAuthenticationToken(@RequestBody(required = false) AuthenticationRequest request){
+		String message;
+	    try{
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));
 
-		}catch(BadCredentialsException e){
-			throw new Exception("Incorrect username or password", e);
+		}catch(Exception e){
+            message = "Incorrect username or password";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 		}
 
 		final MyUserDetails userDetails= myUserDetailsService.loadUserByUsername(request.getUsername());

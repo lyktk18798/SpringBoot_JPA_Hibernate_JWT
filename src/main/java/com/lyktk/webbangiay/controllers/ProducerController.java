@@ -31,12 +31,14 @@ public class ProducerController {
 	public ResponseEntity<?> getAllUsers(@RequestParam(required = false) String email,
 										 @RequestParam(required = false) String fullname,
 										 @RequestParam(required = false) String phonenumber,
-										 @RequestParam(required = false) Integer categoryId) throws Exception{
-		List<Producer> rs= new ArrayList<>();
+										 @RequestParam(required = false) Integer categoryId){
+		List<Producer> rs;
+		String message;
 		try{
 			rs= producerService.findAllProducer(email, fullname, phonenumber, categoryId);
-		}catch(BadCredentialsException e){
-			throw new Exception("Incorrect username or password", e);
+		}catch(Exception e){
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 		}
 
 		return ResponseEntity.ok(rs);
@@ -44,24 +46,17 @@ public class ProducerController {
 	}
 
     @PostMapping("/save")
-    public ResponseEntity<?> saveUser(@RequestBody(required = false)Producer producer) throws Exception{
-        try{
-            producerService.save(producer);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
+    public ResponseEntity<?> saveUser(@RequestBody(required = false)Producer producer){
 
+        producerService.save(producer);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
     @PostMapping("/delete/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable("id")Integer id) throws Exception{
-        try{
-            producerService.delete(id);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
+    public ResponseEntity<?> deleteUser(@PathVariable("id")Integer id){
+
+        producerService.delete(id);
 
         return ResponseEntity.ok(HttpStatus.OK);
 

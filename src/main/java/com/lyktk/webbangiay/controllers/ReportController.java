@@ -3,6 +3,7 @@ package com.lyktk.webbangiay.controllers;
 import com.lyktk.webbangiay.domain.Report;
 import com.lyktk.webbangiay.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.*;
@@ -19,12 +20,14 @@ public class ReportController {
 	@GetMapping("/getAll")
 	public ResponseEntity<?> getAllUsers(@RequestParam(required = false) String productName,
                                          @RequestParam(required = false) String customerName
-                                         ) throws Exception{
+                                         ){
 		List<Report> rs;
+		String message;
 		try{
 			rs= reportService.findAll(productName, customerName);
 		}catch(BadCredentialsException e){
-			throw new Exception("", e);
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 		}
 
 		return ResponseEntity.ok(rs);

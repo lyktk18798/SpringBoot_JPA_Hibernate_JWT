@@ -18,12 +18,14 @@ public class GroupProductController {
     private GroupProductService groupProductService;
 
 	@GetMapping("/getAll")
-	public ResponseEntity<?> getAllUsers(@RequestParam(required = false) String name) throws Exception{
+	public ResponseEntity<?> getAllUsers(@RequestParam(required = false) String name){
 		List<ProductGroup> rs;
+		String message;
 		try{
 			rs= groupProductService.findAllGroup(name);
-		}catch(BadCredentialsException e){
-			throw new Exception("", e);
+		}catch(Exception e){
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 		}
 
 		return ResponseEntity.ok(rs);
@@ -31,25 +33,17 @@ public class GroupProductController {
 	}
 
     @PostMapping("/save")
-    public ResponseEntity<?> saveUser(@RequestBody(required = false)ProductGroup producer) throws Exception{
-        try{
-            groupProductService.save(producer);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
+    public ResponseEntity<?> saveUser(@RequestBody(required = false)ProductGroup producer){
 
+        groupProductService.save(producer);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
     @PostMapping("/delete/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable("id")Integer id) throws Exception{
-        try{
-            groupProductService.delete(id);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
+    public ResponseEntity<?> deleteUser(@PathVariable("id")Integer id){
 
+        groupProductService.delete(id);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }

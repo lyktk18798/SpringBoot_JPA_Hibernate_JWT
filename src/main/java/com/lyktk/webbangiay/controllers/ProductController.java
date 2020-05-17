@@ -40,12 +40,14 @@ public class ProductController {
 										 @RequestParam(required = false) Integer categoryId,
 										 @RequestParam(required = false) Integer producerId,
 										 @RequestParam(required = false) Integer groupId
-    ) throws Exception{
+    ){
 		List<Product> rs;
+		String message;
 		try{
 			rs= productService.findAllProducer(code, name, colorId, priceFrom, priceTo, dateFrom, dateTo, size, categoryId, producerId, groupId);
-		}catch(BadCredentialsException e){
-			throw new Exception("Error", e);
+		}catch(Exception e){
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 		}
 
 		return ResponseEntity.ok(rs);
@@ -53,25 +55,15 @@ public class ProductController {
 	}
 
     @PostMapping("/save")
-    public ResponseEntity<?> saveUser(@RequestBody(required = false)Product product) throws Exception{
-        try{
-            productService.save(product);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
-
+    public ResponseEntity<?> saveUser(@RequestBody(required = false)Product product){
+        productService.save(product);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
     @PostMapping("/delete/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable("id")Integer id) throws Exception{
-        try{
-            productService.delete(id);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
-
+    public ResponseEntity<?> deleteUser(@PathVariable("id")Integer id){
+        productService.delete(id);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
@@ -81,12 +73,14 @@ public class ProductController {
                                                  @RequestParam(required = false) Integer groupId,
                                                  @RequestParam(required = false) Integer color,
                                                  @RequestParam(required = false) Integer category
-    ) throws Exception{
+    ){
         List<Product> rs;
+        String message;
         try{
             rs= productService.search(name, groupId, color, category);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
+        }catch(Exception e){
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
         }
 
         return ResponseEntity.ok(rs);
@@ -94,12 +88,14 @@ public class ProductController {
     }
 
     @GetMapping("v1/getProductByGroup/{groupId}")
-    public ResponseEntity<?> searchProductByGroupId(@PathVariable("groupId") Integer groupId) throws Exception{
+    public ResponseEntity<?> searchProductByGroupId(@PathVariable("groupId") Integer groupId){
         List<Product> rs;
+        String message;
         try{
             rs= productService.getProductByGroup(groupId);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
+        }catch(Exception e){
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
         }
 
         return ResponseEntity.ok(rs);
@@ -107,12 +103,14 @@ public class ProductController {
     }
 
     @GetMapping("v1/getSellingProduct")
-    public ResponseEntity<?> getSellingProduct() throws Exception{
+    public ResponseEntity<?> getSellingProduct(){
         List<Product> rs;
+        String message;
         try{
             rs= productService.getSellingProduct();
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
+        }catch(Exception e){
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
         }
 
         return ResponseEntity.ok(rs);

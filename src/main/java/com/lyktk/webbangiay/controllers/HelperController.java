@@ -26,12 +26,14 @@ public class HelperController {
     private final Path rootLocation = Paths.get("/Users/caokd/Downloads/coreui-free-angular-admin-template-master/src/assets/img/products");
 
 	@GetMapping("/category/getAll")
-	public ResponseEntity<?> getAllCategory() throws Exception{
+	public ResponseEntity<?> getAllCategory(){
 		List<Category> rs;
+		String message;
 		try{
 			rs= helperService.findAllCategory();
 		}catch(BadCredentialsException e){
-			throw new Exception("Error", e);
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 
 		}
 
@@ -39,12 +41,14 @@ public class HelperController {
 
 	}
     @GetMapping("/role/getAll")
-    public ResponseEntity<?> getAllRoles() throws Exception{
+    public ResponseEntity<?> getAllRoles(){
         List<Role> rs;
+        String message;
         try{
             rs= helperService.findAllRole();
         }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 
         }
 
@@ -52,12 +56,14 @@ public class HelperController {
 
     }
     @GetMapping("/producer/getAll")
-    public ResponseEntity<?> getAllProducer() throws Exception{
+    public ResponseEntity<?> getAllProducer(){
         List<Producer> rs;
+        String message;
         try{
             rs= helperService.findAllProducer();
         }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 
         }
 
@@ -84,12 +90,14 @@ public class HelperController {
     }
 
     @GetMapping("/color/getAll")
-    public ResponseEntity<?> getAllColors() throws Exception{
+    public ResponseEntity<?> getAllColors(){
         List<Color> rs;
+        String message;
         try{
             rs= helperService.findAllColors();
         }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 
         }
 
@@ -98,12 +106,14 @@ public class HelperController {
     }
 
     @GetMapping("/groupProduct/getAll")
-    public ResponseEntity<?> getAllProductGroup() throws Exception{
+    public ResponseEntity<?> getAllProductGroup(){
         List<ProductGroup> rs;
+        String message;
         try{
             rs= helperService.findAllProductGroups();
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
+        }catch(Exception e){
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 
         }
 

@@ -24,12 +24,14 @@ public class OrdersController {
 										 @RequestParam(required = false) Integer status,
 										 @RequestParam(required = false) String dateFrom,
 										 @RequestParam(required = false) String dateTo
-                                         ) throws Exception{
+                                         ){
 		List<Orders> rs;
+		String message;
 		try{
 			rs= ordersService.findAllOrders(code, dateFrom, dateTo, status);
 		}catch(BadCredentialsException e){
-			throw new Exception("Error", e);
+            message = "An error occurred";
+            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 
 		}
 
@@ -38,37 +40,22 @@ public class OrdersController {
 	}
 
     @PostMapping("/save")
-    public ResponseEntity<?> save(@RequestBody(required = false)Orders orders) throws Exception{
-        try{
-            ordersService.save(orders);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
-
+    public ResponseEntity<?> save(@RequestBody(required = false)Orders orders){
+        ordersService.save(orders);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
     @PostMapping("/update")
-    public ResponseEntity<?> update(@RequestBody(required = false)Orders orders) throws Exception{
-        try{
-            ordersService.update(orders);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
-
+    public ResponseEntity<?> update(@RequestBody(required = false)Orders orders){
+        ordersService.update(orders);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
     @PostMapping("/v1/add")
-    public ResponseEntity<?> buy(@RequestBody(required = false)OrderRequest orderRequest) throws Exception{
-        try{
-            ordersService.buy(orderRequest);
-        }catch(BadCredentialsException e){
-            throw new Exception("Error", e);
-        }
-
+    public ResponseEntity<?> buy(@RequestBody(required = false)OrderRequest orderRequest){
+        ordersService.buy(orderRequest);
         return ResponseEntity.ok(HttpStatus.OK);
 
     }
