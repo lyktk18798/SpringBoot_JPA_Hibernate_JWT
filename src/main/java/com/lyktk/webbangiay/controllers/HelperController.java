@@ -27,7 +27,7 @@ public class HelperController {
 
 	@GetMapping("/category/getAll")
 	public ResponseEntity<?> getAllCategory() throws Exception{
-		List<Category> rs= new ArrayList<>();
+		List<Category> rs;
 		try{
 			rs= helperService.findAllCategory();
 		}catch(BadCredentialsException e){
@@ -40,7 +40,7 @@ public class HelperController {
 	}
     @GetMapping("/role/getAll")
     public ResponseEntity<?> getAllRoles() throws Exception{
-        List<Role> rs= new ArrayList<>();
+        List<Role> rs;
         try{
             rs= helperService.findAllRole();
         }catch(BadCredentialsException e){
@@ -53,7 +53,7 @@ public class HelperController {
     }
     @GetMapping("/producer/getAll")
     public ResponseEntity<?> getAllProducer() throws Exception{
-        List<Producer> rs= new ArrayList<>();
+        List<Producer> rs;
         try{
             rs= helperService.findAllProducer();
         }catch(BadCredentialsException e){
@@ -85,7 +85,7 @@ public class HelperController {
 
     @GetMapping("/color/getAll")
     public ResponseEntity<?> getAllColors() throws Exception{
-        List<Color> rs= new ArrayList<>();
+        List<Color> rs;
         try{
             rs= helperService.findAllColors();
         }catch(BadCredentialsException e){
@@ -99,7 +99,7 @@ public class HelperController {
 
     @GetMapping("/groupProduct/getAll")
     public ResponseEntity<?> getAllProductGroup() throws Exception{
-        List<ProductGroup> rs= new ArrayList<>();
+        List<ProductGroup> rs;
         try{
             rs= helperService.findAllProductGroups();
         }catch(BadCredentialsException e){

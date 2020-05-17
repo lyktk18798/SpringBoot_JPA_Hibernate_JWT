@@ -45,7 +45,7 @@ public class ProducerServiceImpl implements ProducerService {
         if(u.getId() == null){
             u.setCreateBy(1);
             u.setCreateDate(new Date());
-
+            u.setStatus(Constant.ACTIVE);
         }else{
             u.setUpdateBy(1);
             u.setUpdateDate(new Date());

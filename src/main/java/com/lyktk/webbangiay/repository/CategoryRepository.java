@@ -11,4 +11,8 @@ import java.util.List;
  * UserRepository
  */
 public interface CategoryRepository extends JpaRepository<Category, Integer>{
+
+    List<Category> findAllByNameLikeAndStatusIs(String name, Integer status);
+
+    List<Category> findAllByStatusIs(Integer status);
 }

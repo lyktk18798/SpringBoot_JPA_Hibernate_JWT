@@ -11,13 +11,13 @@ import java.util.List;
  */
 public interface HelperService {
 
-    public List<Category> findAllCategory();
-    public List<Role> findAllRole();
-    public List<Producer> findAllProducer();
-    public List<Color> findAllColors();
-    public List<ProductGroup> findAllProductGroups();
+     List<Category> findAllCategory();
+     List<Role> findAllRole();
+     List<Producer> findAllProducer();
+     List<Color> findAllColors();
+     List<ProductGroup> findAllProductGroups();
 
-    public void sendMail(String emailTo);
+     void sendMail(String emailTo);
 
 }
 

@@ -118,7 +118,7 @@ public class ProductServiceImpl implements ProductService {
             u.setImportBy(1);
             u.setDateImport(new Date());
             u.setCode("SP"+ u.getProductGroup().getId()+u.getCategory().getId() + StringUtils.leftPad(""+(++old), 4, "0"));
-
+            u.setStatus(Constant.ACTIVE);
         }else{
             u.setUpdateBy(1);
             u.setUpdateDate(new Date());

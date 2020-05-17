@@ -2,6 +2,7 @@ package com.lyktk.webbangiay.service;
 
 import com.lyktk.webbangiay.domain.*;
 import com.lyktk.webbangiay.repository.*;
+import com.lyktk.webbangiay.utils.Constant;
 import com.lyktk.webbangiay.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -31,7 +32,7 @@ public class HelperServiceImpl implements HelperService {
 
     @Override
     public List<Category> findAllCategory() {
-        return categoryRepository.findAll();
+        return categoryRepository.findAllByStatusIs(Constant.ACTIVE);
     }
 
     @Override
@@ -41,17 +42,17 @@ public class HelperServiceImpl implements HelperService {
 
     @Override
     public List<Producer> findAllProducer() {
-        return producerRepository.findAll();
+        return producerRepository.findAllByStatusIs(Constant.ACTIVE);
     }
 
     @Override
     public List<Color> findAllColors() {
-        return colorRepository.findAll();
+        return colorRepository.findAllByStatusIs(Constant.ACTIVE);
     }
 
     @Override
     public List<ProductGroup> findAllProductGroups() {
-        return productGroupRepository.findAll();
+        return productGroupRepository.findAllByStatusIs(Constant.ACTIVE);
     }
 
     @Override

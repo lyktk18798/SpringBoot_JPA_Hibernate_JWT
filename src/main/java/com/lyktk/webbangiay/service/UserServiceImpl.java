@@ -86,6 +86,7 @@ public class UserServiceImpl implements UserService {
 	    if(u.getId() == null){
             u.setCreateBy(1);
             u.setCreateDate(new Date());
+            u.setStatus(Constant.ACTIVE);
             String password = RandomStringUtils.randomAlphanumeric(Constant.NUMBER_OF_PASSWORD);
             u.setPassword(passwordEncoder.encode(password));
             sendMail(u.getEmail(), password);
