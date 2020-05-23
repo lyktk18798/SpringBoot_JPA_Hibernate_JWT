@@ -50,4 +50,7 @@ public class Category implements Serializable {
 
     @Column
     private Integer status;
+
+    @Column
+    private String image;
 }

@@ -33,10 +33,6 @@ public class CategoryServiceImpl implements CategoryService {
             u.setCreateBy(1);
             u.setCreateDate(new Date());
             u.setStatus(Constant.ACTIVE);
-
-        }else{
-            u.setUpdateBy(1);
-            u.setUpdateDate(new Date());
         }
         categoryRepository.save(u);
     }

@@ -66,6 +66,9 @@ public class Orders implements Serializable {
     @Column
     private Double discount;
 
+    @Column
+    private String phonenumber;
+
 
 
 }

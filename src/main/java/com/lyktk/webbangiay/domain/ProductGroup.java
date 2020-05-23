@@ -46,4 +46,7 @@ public class ProductGroup implements Serializable {
 
     @Column
     private Integer updateBy;
+
+    @Column
+    private String image;
 }

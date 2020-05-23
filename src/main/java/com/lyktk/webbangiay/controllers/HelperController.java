@@ -2,6 +2,7 @@ package com.lyktk.webbangiay.controllers;
 
 import com.lyktk.webbangiay.domain.*;
 import com.lyktk.webbangiay.service.HelperService;
+import com.lyktk.webbangiay.utils.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,9 +10,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,8 +21,6 @@ public class HelperController {
 	@Autowired
     private HelperService helperService;
 
-    List<String> files = new ArrayList<String>();
-    private final Path rootLocation = Paths.get("/Users/caokd/Downloads/coreui-free-angular-admin-template-master/src/assets/img/products");
 
 	@GetMapping("/category/getAll")
 	public ResponseEntity<?> getAllCategory(){
@@ -71,11 +68,21 @@ public class HelperController {
 
     }
     @PostMapping("/savefile")
-    public ResponseEntity<String> handleFileUpload(@RequestParam("file") MultipartFile file) {
+    public ResponseEntity<String> handleFileUpload(@RequestParam("file") MultipartFile file,
+                                                   @RequestParam("isTypeUpload") int isTypeUpload) {
         String message;
+        String pathUpload = Constant.ROOT_UPLOAD_FILE + "/branch";
+        if(isTypeUpload == 1){
+            pathUpload = Constant.ROOT_UPLOAD_FILE + "/products";
+        }else if(isTypeUpload == 3){
+            pathUpload = Constant.ROOT_UPLOAD_FILE + "/group";
+        }
+        List<String> files = new ArrayList<String>();
+        final Path rootLocation = Paths.get(pathUpload);
+
         try {
             try {
-                Files.copy(file.getInputStream(), this.rootLocation.resolve(file.getOriginalFilename()));
+                Files.copy(file.getInputStream(), rootLocation.resolve(file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
             } catch (Exception e) {
                 throw new RuntimeException("FAIL!");
             }

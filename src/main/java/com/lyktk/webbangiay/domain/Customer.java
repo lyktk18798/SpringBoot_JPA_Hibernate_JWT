@@ -46,6 +46,8 @@ public class Customer implements Serializable {
     @Column
     private Integer point;
 
+    @Column
+    private String name;
 
 
 }
