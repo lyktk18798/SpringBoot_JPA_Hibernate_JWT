@@ -41,7 +41,10 @@ public class OrdersServiceImpl implements OrdersService {
     public List<Orders> findAllOrders(String code, String dateFrom, String dateTo, Integer status) {
         List<Integer> statusOrders = Arrays.asList(status);
         if(status == Constant.ALL_ITEMS){
-            statusOrders= Arrays.asList(1, 2, 3, 4);
+            statusOrders= Arrays.asList(Constant.WAIT_APPROVE,
+                                        Constant.NOT_DELIVER,
+                                        Constant.DELIVERING,
+                                        Constant.DONE);
         }
         return ordersRepository.findAllOrders("%"+code.toUpperCase()+"%",
                                                 statusOrders,
@@ -71,13 +74,15 @@ public class OrdersServiceImpl implements OrdersService {
         Integer old= ordersRepository.findFirstByOrderByIdDesc().getId() ;
 
         //create new order
+        double totalMoney = orderRequest.getLstProducts().stream().mapToDouble(item
+                -> item.getDiscount()*item.getQuantity()*item.getPrice()).sum();
         Orders orders = new Orders();
         orders.setCreateDate(new Date());
         orders.setCustomer(customer);
         orders.setCode("HD"+ StringUtils.leftPad(""+(++old), 6, "0"));
-        orders.setStatus(0);
+        orders.setStatus(Constant.WAIT_APPROVE);
         orders.setAddress(orderRequest.getAddress());
-
+        orders.setTotalMoney(totalMoney);
 
         //save order
         Orders newOrder = ordersRepository.save(orders);
@@ -93,8 +98,8 @@ public class OrdersServiceImpl implements OrdersService {
             ordersDetails.setOrders(newOrder);
             ordersDetails.setQuantity(item.getQuantity());
             ordersDetails.setProduct(product);
-            ordersDetails.setDiscount(0.2);
-
+            ordersDetails.setDiscount(item.getDiscount());
+            ordersDetails.setTotalMoney(item.getPrice()*item.getQuantity()*item.getDiscount());
             //save order-details
             ordersDetailsRepository.save(ordersDetails);
 
@@ -110,23 +115,20 @@ public class OrdersServiceImpl implements OrdersService {
     public void delete(Integer id) {
         Orders orders = ordersRepository.findById(id)
                 .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found orders with id "+id));
-        orders.setStatus(4); //la don hang ao => xoa
+        orders.setStatus(Constant.UNREAL_ORDERS); //la don hang ao => xoa
         ordersRepository.save(orders);
     }
 
     @Override
     public void update(Orders orders) {
-        /*
-        status = 0 => cho phe duyet
-        status = 1 => chua giao
-        status = 2 => dang giao
-        status = 3 => done
-        status = 4 => don hang ao
-         */
-        if(orders.getStatus() == 0 ){
-            orders.setStatus(2);
-        }else{
-            orders.setStatus(3);
+        if(orders.getStatus() == Constant.NOT_DELIVER){
+            //find customer by id
+            Customer customer = customerRepository.findById(orders.getCustomer().getId())
+                    .orElseThrow(() -> new LogicException(HttpStatus.NOT_FOUND, "Not found customer"));
+
+            //verify order and plus point to customer
+            customer.setPoint(customer.getPoint() +
+                    Integer.valueOf(""+Constant.DEDUCT_PRODUCT*(orders.getTotalMoney())));
         }
         ordersRepository.save(orders);
     }

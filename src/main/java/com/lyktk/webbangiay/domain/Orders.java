@@ -69,6 +69,9 @@ public class Orders implements Serializable {
     @Column
     private String phonenumber;
 
+    @Column
+    private Double totalMoney;
+
 
 
 }
