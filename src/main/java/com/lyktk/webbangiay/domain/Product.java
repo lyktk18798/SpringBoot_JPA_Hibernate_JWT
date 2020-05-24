@@ -11,7 +11,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -87,5 +86,8 @@ public class Product implements Serializable {
 
     @Column
     private Integer status;
+
+    @Column
+    private Double discount;
 
 }

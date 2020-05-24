@@ -1,7 +1,10 @@
 package com.lyktk.webbangiay.controllers;
 
 import com.lyktk.webbangiay.domain.*;
+import com.lyktk.webbangiay.domain.custom.Discount;
+import com.lyktk.webbangiay.service.DiscountService;
 import com.lyktk.webbangiay.service.HelperService;
+import com.lyktk.webbangiay.service.ProductService;
 import com.lyktk.webbangiay.utils.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,6 +23,9 @@ public class HelperController {
 
 	@Autowired
     private HelperService helperService;
+
+	@Autowired
+    private DiscountService discountService;
 
 
 	@GetMapping("/category/getAll")
@@ -125,6 +131,13 @@ public class HelperController {
         }
 
         return ResponseEntity.ok(rs);
+
+    }
+
+    @PostMapping("/discount")
+    public ResponseEntity<?> deleteUser(@RequestBody(required = false)Discount discount){
+        discountService.discount(discount);
+        return ResponseEntity.ok(HttpStatus.OK);
 
     }
 }
