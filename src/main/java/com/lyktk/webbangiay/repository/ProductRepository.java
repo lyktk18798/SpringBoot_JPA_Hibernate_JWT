@@ -53,7 +53,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
                         @Param("groupId") List<Integer> groupId,
                         @Param("colorId") List<Integer> colorId,
                         @Param("categoryId") List<Integer> categoryId,
-                         @Param("categoryId") Integer status
+                         @Param("status") Integer status
     );
 
 
